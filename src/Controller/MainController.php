@@ -8,6 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
+
+    // C'est mon controlleur principal
     #[Route('/', name: 'main_index')]
     public function index(): Response
     {
