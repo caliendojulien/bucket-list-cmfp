@@ -10,6 +10,7 @@ class MainController extends AbstractController
 {
 
     // C'est mon controlleur principal
+    // CMFP
     #[Route('/', name: 'main_index')]
     public function index(): Response
     {
