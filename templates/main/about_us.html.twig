@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <ul>
+        {% for membre in equipe %}
+            <li>
+                {{ membre.firstname == 'Fabien' ? '♥'~membre.firstname : membre.firstname }}
+            </li>
+            <img src="{{ membre.picture }}" alt="{{ membre.firstname }}">
+        {% endfor %}
+    </ul>
+{% endblock %}
+

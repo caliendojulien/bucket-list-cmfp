@@ -1,0 +1,34 @@
+@import "couleurs";
+
+@mixin maMixin($couleur) {
+  color: $couleur;
+  background-color: magenta;
+  font-family: 'Comic Sans MS', serif;
+}
+
+h1 {
+  @include maMixin(blue);
+}
+
+h2 {
+  @include maMixin(red);
+}
+
+
+ul {
+  color: lighten($couleurPrincipale, 21);
+
+  li {
+    background-color: #a12929;
+
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
+@for $i from 1 through 25 {
+  .ul-#{$i} {
+    color: darken($couleurPrincipale, $i);
+  }
+}

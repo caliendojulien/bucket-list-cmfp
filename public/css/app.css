@@ -1,0 +1,123 @@
+h1 {
+  color: blue;
+  background-color: magenta;
+  font-family: "Comic Sans MS", serif;
+}
+
+h2 {
+  color: red;
+  background-color: magenta;
+  font-family: "Comic Sans MS", serif;
+}
+
+ul {
+  color: #ff6b6b;
+}
+ul li {
+  background-color: #a12929;
+}
+ul li:hover {
+  color: yellow;
+}
+
+.ul-1 {
+  color: #fa0000;
+}
+
+.ul-2 {
+  color: #f50000;
+}
+
+.ul-3 {
+  color: #f00000;
+}
+
+.ul-4 {
+  color: #eb0000;
+}
+
+.ul-5 {
+  color: #e60000;
+}
+
+.ul-6 {
+  color: #e00000;
+}
+
+.ul-7 {
+  color: #db0000;
+}
+
+.ul-8 {
+  color: #d60000;
+}
+
+.ul-9 {
+  color: #d10000;
+}
+
+.ul-10 {
+  color: #cc0000;
+}
+
+.ul-11 {
+  color: #c70000;
+}
+
+.ul-12 {
+  color: #c20000;
+}
+
+.ul-13 {
+  color: #bd0000;
+}
+
+.ul-14 {
+  color: #b80000;
+}
+
+.ul-15 {
+  color: #b30000;
+}
+
+.ul-16 {
+  color: #ad0000;
+}
+
+.ul-17 {
+  color: #a80000;
+}
+
+.ul-18 {
+  color: #a30000;
+}
+
+.ul-19 {
+  color: #9e0000;
+}
+
+.ul-20 {
+  color: #990000;
+}
+
+.ul-21 {
+  color: #940000;
+}
+
+.ul-22 {
+  color: #8f0000;
+}
+
+.ul-23 {
+  color: #8a0000;
+}
+
+.ul-24 {
+  color: #850000;
+}
+
+.ul-25 {
+  color: maroon;
+}
+
+/*# sourceMappingURL=app.css.map */
