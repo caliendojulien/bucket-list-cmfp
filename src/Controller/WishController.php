@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Wish;
+use App\Repository\WishRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,21 +12,27 @@ use Symfony\Component\Routing\Annotation\Route;
 class WishController extends AbstractController
 {
     #[Route('/', name: '_wishes')]
-    public function wishes(): Response
+    public function wishes(
+        WishRepository $wishRepository
+    ): Response
     {
-        return $this->render('wish/wishes.html.twig');
+        $wishes = $wishRepository->findBy([], ['dateCreated' => 'DESC']);
+        return $this->render(
+            'wish/wishes.html.twig',
+            [
+                "wishes" => $wishes
+            ]
+        );
     }
 
-    /**
-     * Méthode qui retourne un seul wish
-     *
-     * @author Caliendo Julien
-     * @param $id
-     * @return Response
-     */
-    #[Route('/{id}', name: '_wish')]
-    public function wish($id): Response
+    #[Route('/{wish}', name: '_wish')]
+    public function wish(
+        Wish $wish
+    ): Response
     {
-        return $this->render('wish/wish.html.twig');
+        return $this->render(
+            'wish/wish.html.twig',
+            compact('wish')
+        );
     }
 }
