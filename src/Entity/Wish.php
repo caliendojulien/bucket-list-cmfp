@@ -31,7 +31,7 @@ class Wish
 
     public function __construct()
     {
-        $this->dateCreated = new \DateTime();
+        $this->isPublished = true;
     }
 
     public function getId(): ?int

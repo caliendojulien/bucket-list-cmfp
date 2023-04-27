@@ -24,8 +24,17 @@
         <nav>
             <ul>
                 <li><a href="{{ path('main_index') }}">Accueil</a></li>
+                <li><a href="{{ path('wish_wishes') }}">Tous les Wishs</a></li>
+                <li><a href="{{ path('wish_ajouter') }}">Ajouter</a></li>
             </ul>
         </nav>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="flash-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
     </header>
     <main>
         {% block body %}{% endblock %}
