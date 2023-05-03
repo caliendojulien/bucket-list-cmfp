@@ -118,3 +118,7 @@ main a {
 .input-author {
     border: 1px solid #a12929;
 }
+
+span {
+    color: red;
+}

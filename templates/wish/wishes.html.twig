@@ -3,7 +3,7 @@
 {% block body %}
     {% for wish in wishes %}
         <a href="{{ path('wish_wish', {'wish': wish.id}) }}">
-            {{ wish.title }}
+            {{ wish.title }} - {{ wish.category.name }}
         </a>
     {% endfor %}
 {% endblock %}

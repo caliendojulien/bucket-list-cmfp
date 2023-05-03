@@ -2,12 +2,16 @@
 
 @mixin maMixin($couleur) {
   color: $couleur;
-  background-color: magenta;
+  background-color: blue;
   font-family: 'Comic Sans MS', serif;
 }
 
+span {
+  color: blue;
+}
+
 h1 {
-  @include maMixin(blue);
+  @include maMixin(red);
 }
 
 h2 {

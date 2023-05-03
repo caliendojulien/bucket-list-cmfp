@@ -20,14 +20,19 @@ class Wish
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\Column(length: 50)]
-    private ?string $author = null;
-
     #[ORM\Column]
     private ?bool $isPublished = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $dateCreated = null;
+
+    #[ORM\ManyToOne(inversedBy: 'wishes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
+
+    #[ORM\ManyToOne(inversedBy: 'wishes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Utilisateur $author = null;
 
     public function __construct()
     {
@@ -63,18 +68,6 @@ class Wish
         return $this;
     }
 
-    public function getAuthor(): ?string
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(string $author): self
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
     public function isIsPublished(): ?bool
     {
         return $this->isPublished;
@@ -99,5 +92,28 @@ class Wish
         return $this;
     }
 
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?Utilisateur
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?Utilisateur $author): self
+    {
+        $this->author = $author;
+
+        return $this;
+    }
 
 }
